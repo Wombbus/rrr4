@@ -1,0 +1,68 @@
+<html>
+
+<head>
+  <title>Hand Sign To Emoji</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <center>
+      <h3 class="btn btn-warning">HAND SIGN TO EMOJI APP
+        <br>
+        <span>&#9994;</span>
+        <span>&#9996;</span>
+        <span>&#128075;</span>
+        <span>&#128078;</span>
+        <span>&#128076;</span>
+        <span>&#128080;</span>
+
+      </h3>
+      <br><br>
+
+      <p style="font-size: 22px;">Take your selfie to generate emoji
+        <br>
+        <b style="color: yellow">Whats the Hand Gesture?</b>
+      </p>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <label>Webcam view</label>
+        <div id="camera"></div>
+        <br>
+        <button class="btn btn-warning" onclick="capture()">Capture Image</button>
+      </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <label>Prediction 1</label>
+        <p id="emotionName1"></p>
+        <p id="emoji1"></p>
+        <label>Prediction 2</label>
+        <p id="emotionName2"></p>
+        <p id="emoji2"></p>
+      </div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <label>Snapshot - </label>
+        <div id="result"></div>
+        <br><br>
+        <button class="btn btn-success" onclick="predict()">Predict Hand Sign</button>
+      </div>
+
+    </center>
+
+  </div>
+
+  <script src="main.js"></script>
+
+</body>
+
+</html>
